@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Test Suite" parallel="methods" thread-count="10">
+    <test name="TestLogin">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="Test.LoginTest" />
+        </classes>
+    </test>
+    <test name="TestDashboard">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="Test.DashboardTest" />
+            <class name="Test.CustomerTest" />
+        </classes>
+    </test>
+</suite>
